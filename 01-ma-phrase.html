@@ -47,7 +47,7 @@
     <br/>
     <input type="text" id="sentence" placeholder="Votre phrase"/>
 
-    <button type="button" class="btn btn-primary" onclick="analyse()">
+    <button type="button" class="btn btn-primary" onclick="analyze()">
         Analyser la phrase
     </button>
 </div>
@@ -56,7 +56,27 @@
 
     function analyze() {
         // CODE HERE !
-    }
+        // Variable qui recupere la valeur de ID sentence
+        let sentence= document.getElementById("sentence").value;
+        // creation du tableau 
+        let myTab = [sentence.length , sentence.at('5') , sentence.substring(0, 3) , sentence.slice (-3),];
+            alert(myTab);
+        return(myTab); 
+        
+    } 
+    // if (sentence.lenght >=5);
+        // else {
+            // }        
+            //  return(myTab);
+            
+
+          
+         
+         
+       
+    
+        
+        }
 
 </script>
 </body>
