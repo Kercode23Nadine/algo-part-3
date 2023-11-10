@@ -59,15 +59,18 @@
         // Variable qui recupere la valeur de ID sentence
         let sentence= document.getElementById("sentence").value;
         // creation du tableau 
-        let myTab = [sentence.length , sentence.at('5') , sentence.substring(0, 3) , sentence.slice (-3),];
-            alert(myTab);
-        return(myTab); 
-        
-    }
-    // if (sentence.lenght >=5);
-        // else {
-            // }        
-            //  return(myTab);
+        let myTab = [sentence.length , sentence.at('4') , sentence.substring(0, 3) , sentence.slice (-3),];
+            // alert(myTab);
+        // return(myTab); 
+    
+    if (sentence.length >= 5 ) {
+        alert(myTab);
+        return(myTab);
+     } else {
+        alert(myTab[0]);
+        return(myTab[0]);
+     }
+    }    
             
 
 </script>
