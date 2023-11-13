@@ -64,24 +64,24 @@
             let word = 0;
             let currentChar
             let previousChar = " "
+            
 
+            // on déclare dans la boucle i=0, i plus petit que ma phrase, et on avance d'un pas
             for (let i = 0; i < sentence.length; i++) {
-
-            }
-                // on déclare dans la boucle i=0, i plus petit que ma phrase, et on avance d'un pas
-                for (let i = 0; i < sentence.length; i++) {
-                    // je range dans currentChar le caractere contenu à la position i
-                    currentChar = sentence.charAt(i)
-                    if ((currentChar !== " ") && (previousChar === " ")) {
-                        word++;
-                    }
-                    // on sort de la boucle pour retourner a previousChar= espace pour avoir le premier espace du premier mot
-                    previousChar = currentChar;
+                // je range dans currentChar le caractere contenu à la position i
+                currentChar = sentence.charAt(i)
+                // replaceAll va remplacer les caracteres par des espaces
+                sentence = sentence.replaceAll(/[|?|!|,|;|:]/g , "");
+                if ((currentChar !== " ") && (previousChar === " ")) {
+                    word++;
                 }
-                console.log(`le nombre de mot est ${word}`);
-
+                // on sort de la boucle pour retourner a previousChar= espace pour avoir le premier espace du premier mot
+                previousChar = currentChar;
             }
-        
+            console.log(`le nombre de mot est ${word}`);
+
+        }
+
 
     </script>
 </body>
