@@ -49,45 +49,49 @@
          * Ici le commentaire sur la fonction average...
          */
         function average(noteArray) {
-            let result = 0
+
             let total = 0
             // element recupere le tableau noteArray avec methode forEach
             // =>renvoie a fonction average
             noteArray.forEach((element) => {
-                // noteArray.forEach(function average(noteArray){ *version2*
                 total += element;
-                // total+=noteArray *version2*
             });
-            result = total / noteArray.length;
+
             console.log(total)
 
-            console.log(result.toFixed(2))
-
-
-
-
-            // // boucle pour calculer la somme avec while
-            // while (i < len) {
-            //     total = total + notes[i++];
-            // }
-            // result = total / len
-            // // CODE HERE !
-            // console.log(result.toFixed(2))
-
-            // Version boucle avec for ou l'on reprend l'element de la fonction 
-            // let total = 0
-            // let result = 0
-            // for (i = 0; i < noteArray.length; i++) {
-
-            //     total += noteArray[i];
-
-            // }
-            // result = total / noteArray.length
-            // console.log(result.toFixed(2))
-
-            // Version boucle for forEach
-
+            console.log(`la moyenne est:${(total / noteArray.length).toFixed(2)}`)
         }
+    // ------------------------------------
+        /* version ForEACH BIS
+         *let total = 0
+
+         *function comute(Tab) {
+         *    total += Tab;
+         * }
+         *function average(noteArray) {
+         *  noteArray.forEach(comute);
+         *console.log(`la moyenne est:${(total / noteArray.length).toFixed(2)}`)
+         * }
+         */ 
+    //------------------------------------
+        /*boucle pour calculer la somme avec WHILE
+        *while (i < len) {
+        * total = total + notes[i++];
+        *}
+        *result = total / len
+        * CODE HERE !
+        *console.log(result.toFixed(2))
+    // ------------------------------------
+        /*Version boucle avec FOR ou l'on reprend l'element de la fonction
+        *let total = 0
+        * let result = 0
+        * for (i = 0; i < noteArray.length; i++) {
+        *   total += noteArray[i];
+        * }
+        *result = total / noteArray.length
+        *console.log(result.toFixed(2))
+        */
+
 
 
 
