@@ -91,12 +91,15 @@
             // CODE HERE !
             let result = 0
             let total = 0
+            // 
+            // fonction pour le calcul de la moyenne des notes de mon tableau
             notes.forEach(function (noteArray) {
                 total += noteArray
             })
             // console.log(result.toFixed(2))
             result = total / notes.length;
             // console.log(result)
+            //resultat a 2 chiffre aprés la ,
             return result.toFixed(2)
         }
         /*
@@ -112,19 +115,23 @@
             // on indique  a newNote qu'il doit se comporter comme un nombre
             newNotefloat = parseFloat(newNote)
             // console.log(newNotefloat)
+            // conditions
             if (newNotefloat <= 0 || newNotefloat >= 20 || newNotefloat !== newNotefloat)
                 alert("Entrer une note comprise entre 0 & 20");
+            // alors on rajopute avec push la nouvelle note
             else (notes.push(newNotefloat))
-            //appel de la fonction average
+            //appel de la fonction average, pour recalculer 
             resultbis = average()
             console.log(notes)
             console.log(resultbis)
-            
             alert(`la moyenne est : ${(resultbis)}`)
             console.log(average)
-            // appel de la fonction displayArray qui affiche le tableau de notes
+            // appel de la fonction displayArray qui affiche le tableau de notes 
             displayArray(notes);
+            // reinitialise à 0
+            total=0
             
+
         }
 
     </script>
