@@ -91,6 +91,7 @@
             // CODE HERE !
             let result = 0
             let total = 0
+            
             // 
             // fonction pour le calcul de la moyenne des notes de mon tableau
             notes.forEach(function (noteArray) {
@@ -111,9 +112,9 @@
         function refreshAverage() {
             // CODE HERE !
 
-            let newNote = document.getElementById("note").value;
+            let newNote = parseFloat(document.getElementById("note").value);
             // on indique  a newNote qu'il doit se comporter comme un nombre
-            newNotefloat = parseFloat(newNote)
+            // newNotefloat = parseFloat(newNote)
             // console.log(newNotefloat)
             // conditions
             if (newNotefloat <= 0 || newNotefloat >= 20 || newNotefloat !== newNotefloat)
@@ -130,6 +131,8 @@
             displayArray(notes);
             // reinitialise à 0
             total=0
+        
+            
             
 
         }
